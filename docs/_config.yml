@@ -48,3 +48,6 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+liquid:
+  error_mode: warn

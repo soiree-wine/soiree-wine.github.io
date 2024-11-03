@@ -223,7 +223,7 @@
         var url = urls[userLang] ?? defaultUrl;
         if (window.location.pathname !== url) {
             var redirectUrl;
-            if (!window.location.href.endsWith('/')) {
+            if (window.location.href.endsWith('/')) {
                 len = window.location.href.length;
                 redirectUrl = window.location.href.substring(0, len - 1) + url;
             } else {

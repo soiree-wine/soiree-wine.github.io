@@ -215,15 +215,6 @@
                 pauseOnFocus: false,
             });
         })
-        var userLang = navigator.language || navigator.userLanguage;
-        var urls = {
-                'ja': '/',
-        };
-        var defaultUrl = '/';
-        var url = urls[userLang] ?? defaultUrl;
-        if (window.location.pathname !== url) {
-            window.location.href = url;
-        }
     </script>
     <script src="js/common.js"></script>
 

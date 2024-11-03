@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+body {
+    animation-name: fadeInAnime;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    line-height: 1.75;
+    overflow-x: auto;
+    text-align: justify;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--c_base_02);
+    color: #4b5254;
+    font-size: 14px;
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+    font-weight: 300;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "palt";
+}
+
+.en{
+    font-family: "bodoni-urw", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+a {
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+
+@media screen and (min-width: 767px) {
+    .pc {
+        display: block !important;
+    }
+
+    .sp {
+        display: none !important;
+    }
+
+    /* インライン要素の時 */
+    .pcinline {
+        display: inline;
+    }
+
+    .spinline {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pc {
+        display: none !important;
+    }
+
+    .sp {
+        display: block !important;
+    }
+
+    /* インライン要素の時 */
+    .pcinline {
+        display: none !important;
+    }
+
+    .spinline {
+        display: inline;
+    }
+}
+
+.mt05 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mt01em {
+    margin-top: 1em;
+}
+
+.mb01em {
+    margin-bottom: 1em;
+}
+
+.fs18 {
+    font-size: 18px
+}
+
+:root {
+    --c_base_01: #646464;
+    --c_base_02: #a4a4a6;
+    --c_base_03: #d3d3d3;
+}
+
+.red {
+    color: #d80c18;
+}
+
+.t_center {
+    text-align: center;
+}
+
+header.head h1 {
+    position: fixed;
+    top: 20px;
+    z-index: 1;
+    padding-inline: 5% 0;
+}
+
+header.head .nav_wrap {
+    position: fixed;
+    top: 20px;
+    right: 5%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+}
+
+header.head .list {
+    display: flex;
+    gap: 40px;
+}
+
+header.head .list li:last-child a {
+    display: block;
+    background-color: #fff;
+    margin-right: 40px;
+    padding: 5px 25px;
+    border-radius: 20px;
+    color: #000
+}
+
+header.head .sns_list {
+    display: flex;
+    gap: 10px;
+}
+
+.wrap {
+    width: min(1080px, 90%);
+    margin-inline: auto;
+    padding-block: 0 100px;
+}
+
+.ttl {
+    margin-inline: auto;
+    padding-block: 90px 30px;
+    line-height: 1;
+    font-size: 38px;
+    text-align: center;
+}
+
+.ttl_02 {
+    font-size: 21px;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: var(--c_base_02);
+    padding: 12px 0 10px;
+}
+
+.arrow {
+    position: relative;
+    display: inline-block;
+}
+
+.arrow:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 0.5px #000;
+    border-right: solid 0.5px #000;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    margin-left: -10px;
+}
+
+.arrow a {
+    margin-right: 1em;
+}
+
+.sp_nav {
+    position: fixed;
+    background-color: #505050;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 200;
+}
+
+.sp_nav ul {
+    display: flex;
+    height: 60px;
+}
+
+.sp_nav li {
+    width: calc(100% / 2);
+    border-right: 2px solid #fff;
+}
+
+.sp_nav li:first-child {
+    background-color: #000
+}
+
+.sp_nav li:last-child {
+    border-right: none;
+}
+
+.sp_nav a {
+    padding-block: 20px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .wrap {
+        padding-block: 0 50px;
+    }
+
+    .ttl {
+        padding-block: 40px 20px;
+        font-size: 28px;
+    }
+
+    footer {
+        padding-bottom: 80px;
+    }
+}

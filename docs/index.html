@@ -219,10 +219,17 @@
         var urls = {
                 'ja': '/',
         };
-        var defaultUrl = '/';
+        var defaultUrl = '/en/';
         var url = urls[userLang] ?? defaultUrl;
         if (window.location.pathname !== url) {
-            window.location.href = url;
+            var redirectUrl;
+            if (!window.location.href.endsWith('/')) {
+                len = window.location.href.length;
+                redirectUrl = window.location.href.substring(0, len - 1) + url;
+            } else {
+                redirectUrl = window.location.href + url;
+            }
+            window.location.href = redirectUrl;
         }
     </script>
     <script src="js/common.js"></script>

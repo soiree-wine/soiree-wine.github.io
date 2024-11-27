@@ -176,6 +176,11 @@ header.head .sns_list {
     gap: 10px;
 }
 
+header.head .lang_list {
+    display: flex;
+    gap: 10px;
+}
+
 .wrap {
     width: min(1080px, 90%);
     margin-inline: auto;

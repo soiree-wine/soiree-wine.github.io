@@ -54,6 +54,10 @@
                 <li><a href="https://www.instagram.com/soiree.wine/" target="_blank" rel="noopener noreferrer"><img src="img/icon_insta.svg"></a></li>
                 <li><a href="https://www.facebook.com/soiree.wine/" target="_blank" rel="noopener noreferrer"><img src="img/icon_fb.svg"></a></li>
             </ul>
+	    <ul class="lang_list">
+		<li><a href="./en/">EN</a></li>
+		<li>JP</li>
+	    </ul>
         </nav>
     </header>
     <!-- slick -->
@@ -215,23 +219,6 @@
                 pauseOnFocus: false,
             });
         })
-        var userLang = navigator.language || navigator.userLanguage;
-        var urls = {
-                'ja': '/',
-        };
-        var defaultUrl = '/en/';
-        var url = urls[userLang] ?? defaultUrl;
-        if (window.location.pathname !== url) {
-            var redirectUrl;
-            if (window.location.href.endsWith('/')) {
-                var len = window.location.href.length;
-                redirectUrl = window.location.href.slice(0, len - 1) + url;
-            } else {
-                redirectUrl = window.location.href + url;
-            }
-            //console.log(redirectUrl);
-            window.location.href = redirectUrl;
-        }
     </script>
     <script src="js/common.js"></script>
 
